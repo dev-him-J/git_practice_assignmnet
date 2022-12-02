@@ -1,15 +1,22 @@
 //code to check Prime
 
 function checkPrime(N){
+    if(N <= 1)
+    {
+        console.log("Not a prime  number");
+        return;
+    }
+    
     let isPrime=true;
-for(let i=0;i<N;i++){
+    
+for(let i=2;i<N;i++){
   if(N%i===0){
     isPrime=false;
 }
 if(isPrime===true){
   console.log("Yes this is a prime number);
 }else{
-console.log("Not a prime  number")
+console.log("Not a prime  number");
 }
 }
 
@@ -18,7 +25,7 @@ console.log("Not a prime  number")
 
 function checkPallindrome(N,str){
 let rev_str="";
-for(let i=N-1;i<=0;i++){
+for(let i=N-1;i >= 0;i--){
  rev_str+=str[i];
 }
 if(rev_str===str){
